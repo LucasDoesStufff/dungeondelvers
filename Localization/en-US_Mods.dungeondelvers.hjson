@@ -1,0 +1,53 @@
+Items: {
+	DungeonGenDebug: {
+		DisplayName: Dungeon Gen Debug
+		Tooltip: ""
+	}
+
+	RoomTest: {
+		DisplayName: Room Test
+		Tooltip: ""
+	}
+
+	GenTile: {
+		DisplayName: Gen Tile
+		Tooltip: ""
+	}
+
+	down: {
+		DisplayName: down
+		Tooltip: ""
+	}
+
+	left: {
+		DisplayName: left
+		Tooltip: ""
+	}
+
+	right: {
+		DisplayName: right
+		Tooltip: ""
+	}
+
+	up: {
+		DisplayName: up
+		Tooltip: ""
+	}
+}
+
+Projectiles: {
+	DungeonGenTest.DisplayName: Dungeon Gen Test
+	DungeonGenTest1.DisplayName: Dungeon Gen Test1
+	Walker.DisplayName: Walker
+	EmptyProjectile.DisplayName: Empty Projectile
+}
+
+DamageClasses.BleedDamage.DisplayName: Bleed Damage
+
+Tiles: {
+	GenTile.MapEntry: Gen Tile
+	down.MapEntry: down
+	left.MapEntry: left
+	right.MapEntry: right
+	up.MapEntry: up
+}

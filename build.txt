@@ -1,0 +1,5 @@
+displayName = Dungeon Delvers
+author = PalegardenStudios
+version = 0.2
+modReferences = StructureHelper, SubworldLibrary
+dllReferences = StructureHelper, SubworldLibrary

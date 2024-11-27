@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<!-- Import tModLoader mod properties -->
+	<Import Project="..\tModLoader.targets" />
+
+	<!-- General -->
+	<PropertyGroup>
+		
+	</PropertyGroup>
+	<ItemGroup>
+	  <Folder Include="Content\Structures\" />
+	  <Folder Include="Content\Subworlds\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="StructureHelper">
+	    <HintPath>lib\StructureHelper.dll</HintPath>
+	  </Reference>
+	  <Reference Include="SubworldLibrary">
+	    <HintPath>lib\SubworldLibrary.dll</HintPath>
+	  </Reference>
+	</ItemGroup>
+
+	<!-- References -->
+
+</Project>
