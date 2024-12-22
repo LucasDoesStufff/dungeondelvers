@@ -17,6 +17,15 @@ namespace dungeondelvers.Content.Items.DungeonGen
          *
          */
 
+        /*
+         * for the style picking in structures if the index starts from 0 just make it blank if it doesnt the formula is like this:
+         * x = index
+         * y = style id (basically the shape because every block is gonna get replaced)
+         * z = structure shape
+         * 0 is the basic one
+         * x = z + (24[assuming the whole set has 24 structures] * y)
+         */
+
 
         /*
          * make a set amount of forced rooms depending on dungoen size which can differ from stage to stage and make the generator generate the rooms before creating dead ends

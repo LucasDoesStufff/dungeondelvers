@@ -10,6 +10,12 @@ using Terraria.ModLoader;
 
 namespace dungeondelvers.Core.Systems.CameraHandler
 {
+    /*
+     *  Big thanks to starlight river for this!
+     */
+
+
+
     internal class CameraSystem : ModSystem
     {
         public bool Shake { get; set; }

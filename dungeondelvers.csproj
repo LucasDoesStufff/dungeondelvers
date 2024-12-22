@@ -8,6 +8,7 @@
 		
 	</PropertyGroup>
 	<ItemGroup>
+	  <Folder Include="Content\Talents\" />
 	  <Folder Include="Content\Structures\" />
 	  <Folder Include="Content\Subworlds\" />
 	</ItemGroup>
@@ -18,6 +19,12 @@
 	  <Reference Include="SubworldLibrary">
 	    <HintPath>lib\SubworldLibrary.dll</HintPath>
 	  </Reference>
+	</ItemGroup>
+	<ItemGroup>
+	  <EditorConfigFiles Remove="C:\Users\topra\OneDrive\Belgeler\My Games\Terraria\tModLoader\ModSources\dungeondelvers\Content\WorldGeneration\.editorconfig" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="C:\Users\topra\OneDrive\Belgeler\My Games\Terraria\tModLoader\ModSources\dungeondelvers\Content\WorldGeneration\.editorconfig" />
 	</ItemGroup>
 
 	<!-- References -->

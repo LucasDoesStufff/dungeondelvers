@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using dungeondelvers.Content.Tiles;
 using dungeondelvers.Core;
 using StructureHelper;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
-using Terraria.ModLoader;
+using Terraria.WorldBuilding;
 
 namespace dungeondelvers.Content.Items.DungeonGen
 {
@@ -20,6 +21,7 @@ namespace dungeondelvers.Content.Items.DungeonGen
         private int right;
         private int up;
         private int down;
+        private int rooms;
 
         public override void SetDefaults()
         {
@@ -40,7 +42,7 @@ namespace dungeondelvers.Content.Items.DungeonGen
 
         public override bool? UseItem(Player player)
         {
-            if (player.altFunctionUse == 2)
+            if (player.altFunctionUse == 2 && rooms < 30)
             {
                 for (int i = 0; i < Main.maxTilesX; i++)
                 {
@@ -51,10 +53,40 @@ namespace dungeondelvers.Content.Items.DungeonGen
                         if (tile.HasTile && tile != null)
                         {
                             // LRUD
-                            
+                            //Main.NewText("corridor placed");
+                            if(tile.TileType == ModContent.TileType<Content.Tiles.left>())
+                            {
+                                
+                                rooms++;
+                                Generator.GenerateMultistructureRandom(AssetDirectory.StructureFolder + "CorridorsBasic", new(i - 25, j - 12), dungeondelvers.Instance);
+                                tile.HasTile = false;
+                            }
+                            if (tile.TileType == ModContent.TileType<Content.Tiles.right>())
+                            {
+                                rooms++;
+                                Generator.GenerateMultistructureRandom(AssetDirectory.StructureFolder + "CorridorsBasic", new(i + 1, j - 12), dungeondelvers.Instance);
+                                tile.HasTile = false;
+                            }
+                            if (tile.TileType == ModContent.TileType<Content.Tiles.up>())
+                            {
+                                rooms++;
+                                Generator.GenerateMultistructureRandom(AssetDirectory.StructureFolder + "CorridorsBasic", new(i - 12, j - 25), dungeondelvers.Instance);
+                                tile.HasTile = false;
+                            }
+                            if (tile.TileType == ModContent.TileType<Content.Tiles.down>())
+                            {
+
+                                rooms++;
+                                Generator.GenerateMultistructureRandom(AssetDirectory.StructureFolder + "CorridorsBasic", new(i - 12, j + 1), dungeondelvers.Instance);
+                                tile.HasTile = false;
+                            }
                         }
                     }
                 }
+            }
+            else
+            {
+                rooms = 0;
             }
             return true;
         }

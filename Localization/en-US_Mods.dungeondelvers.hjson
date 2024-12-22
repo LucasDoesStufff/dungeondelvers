@@ -42,7 +42,11 @@ Projectiles: {
 	EmptyProjectile.DisplayName: Empty Projectile
 }
 
-DamageClasses.BleedDamage.DisplayName: Bleed Damage
+DamageClasses: {
+	BleedDamage.DisplayName: Bleed Damage
+	TalentDamage.DisplayName: Talent Damage
+	TrueDamage.DisplayName: True Damage
+}
 
 Tiles: {
 	GenTile.MapEntry: Gen Tile

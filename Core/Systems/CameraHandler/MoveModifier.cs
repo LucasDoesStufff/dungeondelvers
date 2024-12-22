@@ -5,6 +5,12 @@ using Terraria.Graphics.CameraModifiers;
 
 namespace dungeondelvers.Core.Systems.CameraHandler
 {
+
+    /*
+     *  Big thanks to starlight river for this!
+     */
+
+
     internal class MoveModifier : ICameraModifier
     {
         public Func<Vector2, Vector2, float, Vector2> EaseInFunction = Vector2.SmoothStep;

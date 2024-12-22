@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace dungeondelvers.Core.Systems
 {
-    internal class RoomDetectionSystem : ModSystem
+    internal class RoomBackgorundHandler : ModSystem // drawing of the bg scrolling effects on the room
     {
         
     }
