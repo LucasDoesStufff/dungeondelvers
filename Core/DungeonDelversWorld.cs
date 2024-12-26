@@ -10,7 +10,6 @@ namespace dungeondelvers.Core
     {
         public static float visualTimer;
         public static float timer;
-        public bool NigtmareMode;
 
         public override void PreUpdateWorld()
 		{

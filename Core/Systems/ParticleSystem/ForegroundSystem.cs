@@ -13,6 +13,10 @@ using Terraria.GameContent;
 using Terraria.ID;
 using dungeondelvers.Core;
 
+	/*
+     *  Big thanks to starlight river for this!
+     */
+
 namespace dungeondelvers.Core.Systems.ForegroundSystem
 {
 	class ForegroundSystem : IOrderedLoadable

@@ -1,5 +1,8 @@
 namespace dungeondelvers.Core
 {
+	/// <summary>
+	/// this class is used for overriding the texture method for less typing and can be modified to add new assets
+	/// </summary>
 	public static class AssetDirectory
 	{
 		public const string Assets = "dungeondelvers/Assets/";

@@ -30,7 +30,12 @@ namespace dungeondelvers.Core
 		private readonly Update UpdateDelegate;
 
 		private readonly AnchorOptions Anchor;
-
+		/// <summary>
+		/// Creates a new particle layer with the given texture, new particle textures can be added with the AddParticle method. Warning! adding a new particle texture will only add the texture, current way of implementation doesn't let it change the behaviour of the new particle
+		/// </summary>
+		/// <param name="texture">This should include your mods name and the texture path, example: "ModName/Assets/Textures/Particle"</param>
+		/// <param name="updateDelegate">The main update method for particle AI and behaviour</param>
+		/// <param name="anchor">The anchor point of the particles. Making it world will make it inside the world, making it Screen makes it stay inside the screen</param>
 		public ParticleSystem(string texture, Update updateDelegate, AnchorOptions anchor = AnchorOptions.Screen)
 		{
 			Texture = Request<Texture2D>(texture, ReLogic.Content.AssetRequestMode.ImmediateLoad).Value;

@@ -11,6 +11,10 @@ using Terraria.IO;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
+	/*
+     *  Big thanks to starlight river for this!
+     */
+
 namespace dungeondelvers.Core.Systems.ForegroundSystem
 {
 	class ForegroundHook : HookGroup

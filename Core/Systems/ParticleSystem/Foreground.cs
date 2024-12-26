@@ -11,6 +11,11 @@ using Terraria.Enums;
 using Terraria.GameContent;
 using Terraria.ID;
 
+	/*
+     *  Big thanks to starlight river for this!
+     */
+
+
 namespace dungeondelvers.Core.Systems.ForegroundSystem
 {
 	public abstract class Foreground

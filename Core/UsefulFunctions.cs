@@ -15,6 +15,19 @@ namespace dungeondelvers.Core
 {
     internal static class UsefulFunctions
     {
+        /// <summary>
+        /// Handles the vanilla multiple projectile shot shuch as shotguns
+        /// </summary>
+        /// <param name="player"></param>
+        /// <param name="source"></param>
+        /// <param name="position"></param>
+        /// <param name="velocity"></param>
+        /// <param name="type"></param>
+        /// <param name="damage"></param>
+        /// <param name="knockback"></param>
+        /// <param name="numberProjectiles"></param>
+        /// <param name="rotationAmount"></param>
+        /// <param name="randomSpread"></param>
         public static void MultipleShot(Player player, IEntitySource source, Vector2 position, Vector2 velocity, int type, int damage, float knockback, int numberProjectiles, float rotationAmount, bool randomSpread)
         {
             position += Vector2.Normalize(new Vector2(velocity.X, velocity.Y)) * 45f;
@@ -34,6 +47,14 @@ namespace dungeondelvers.Core
                 Projectile.NewProjectile(source, position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockback, player.whoAmI);
             }
         }
+        /// <summary>
+        /// Adds the dust ring effect from TSOTRC bosses
+        /// </summary>
+        /// <param name="center">Center of the ring</param>
+        /// <param name="radius">Radius of the ring</param>
+        /// <param name="dustID"></param>
+        /// <param name="dustCount">Maximum amount of dust</param>
+        /// <param name="dustSpeed">Dust rotation speed</param>
         public static void DustRing(Vector2 center, float radius, int dustID, int dustCount = 5, float dustSpeed = 2f)
         {
             for (int i = 0; i < dustCount; i++)
@@ -44,15 +65,32 @@ namespace dungeondelvers.Core
                 Dust.NewDustPerfect(val, dustID, (Vector2?)dustVel, 200, default(Color), 1f).noGravity = true;
             }
         }
+        /// <summary>
+        /// Checks if the player is standing on a solid block
+        /// </summary>
+        /// <param name="player"></param>
+        /// <returns></returns>
         public static bool IsGrounded(this Player player)
         {
             return player.velocity.Y >= 0f && Collision.SolidCollision(player.BottomLeft, 32, 8, true);
         }
-        
+        /// <summary>
+        /// Checks if the given position is on the screen
+        /// </summary>
+        /// <param name="pos"></param>
+        /// <returns></returns>
         public static bool OnScreen(Vector2 pos)
 		{
 			return pos.X > -16 && pos.X < Main.screenWidth + 16 && pos.Y > -16 && pos.Y < Main.screenHeight + 16;
 		}
+
+        /// <summary>
+        /// For advanced collision checking EXPERIMENTAL
+        /// </summary>
+        /// <param name="targets"></param>
+        /// <param name="mains"></param>
+        /// <param name="maxRange"></param>
+        /// <returns></returns>
         public static bool CheckMultipleRange(Vector2[] targets, Vector2[] mains, float maxRange)
         {
             return mains.All(p => targets.All(z => p.WithinRange(z,maxRange)));
